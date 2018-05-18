@@ -44,6 +44,8 @@ Para ver los remotes que ya están asignados se utiliza **git remote -v**
 
 ### Git status
 
+git status -sb
+
 Muestra: 
 
 **Changes to be commited:** Esta sección muestra los cambios añadidos al stage y que formarán parte del próximo commit.
@@ -58,3 +60,17 @@ En **Changes to be commited** nos dice:
 use "git reset HEAD <file>..." to unstage
   
 Es decir, si queremos hacer unstage (sacar del stage) de los cambios sobre file2-modified.txt, debemos ejecutar **git reset HEAD file2-modified.txt.**
+
+
+### Listar ramas
+Para listar las ramas existentes en nuestro repositorio, usaremos:
+
+git branch -va
+
+´´´
+$ git branch -va
+* master                  bed4c52 Sample commit
+  dev                     bd81885 Another commit
+  remotes/origin/master   bed4c52 Sample commit
+  remotes/origin/dev      bed4c52 Sample commit
+´´´
