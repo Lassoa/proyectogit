@@ -1,12 +1,13 @@
-## Welcome to GitHub Pages
+## Proyecto de Control de Versiones
 
-You can use the [editor on GitHub](https://github.com/Lassoa/proyectogit/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Esta es la página de github.io que hostea la documentación del proyecto
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Primeros pasos
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+git init
+git config --global user.name [name]
+git config --global user.email [email]
+git config --global core.autocrlf input
 
 ```markdown
 Syntax highlighted code block
