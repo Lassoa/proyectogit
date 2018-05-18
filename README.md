@@ -39,32 +39,17 @@ Esto creará un remote con la URL indicada y el nombre "origin"
 
 Para ver los remotes que ya están asignados se utiliza **git remote -v**
 
-### 
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+### Git status
 
-1. Numbered
-2. List
+Muestra: 
 
-**Bold** and _Italic_ and `Code` text
+**Changes to be commited:** Esta sección muestra los cambios añadidos al stage y que formarán parte del próximo commit.
 
-[Link](url) and ![Image](src)
-```
+**Changes not staged for commit:** En esta sección se muestran los cambios que se han hecho sobre nuestros ficheros, pero que no han sido añadidos al stage y por tanto no formarán parte del próximo commit.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+**Untracked files:** Aquí se ven los ficheros que están en nuestro workspace de los que Git no tiene conocimiento aún. Es decir, no forman parte del control de versiones y por tanto, lógicamente, no formarán parte del próximo commit.
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Lassoa/proyectogit/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
