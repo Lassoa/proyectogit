@@ -5,8 +5,11 @@ Esta es la página de github.io que hostea la documentación del proyecto
 ### Primeros pasos
 
 git init
+
 git config --global user.name [name]
+
 git config --global user.email [email]
+
 git config --global core.autocrlf input
 
 ```markdown
