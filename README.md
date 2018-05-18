@@ -14,8 +14,11 @@ Esta es la página de github.io que hostea la documentación del proyecto
 **Commits (remotos)**: Cuando se suben cambios al servidor (o como se le llama en Git: el remoto), se considera que estos entran a formar parte del histórico compartido entre los desarrolladores del proyecto y, por lo tanto, no es buena práctica modificarlos del mismo modo en que se hace cuando los commits son locales (además hacerlo puede provocar importantes quebraderos de cabeza).
 
 **1- Cambios en mi workspace**
+
 **2- Se agregan los cambios al stage (add)**
+
 **3- Commit**
+
 **4- Se suben los cambios al remoto (push)**
 
 ### Primeros pasos
@@ -27,6 +30,14 @@ git config --global user.name [name]
 git config --global user.email [email]
 
 git config --global core.autocrlf input
+
+
+
+git remote add origin **[URL]**
+
+Esto creará un remote con la URL indicada y el nombre "origin"
+
+Para ver los remotes que ya están asignados se utiliza **git remote -v**
 
 ### 
 
