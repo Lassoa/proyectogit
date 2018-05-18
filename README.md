@@ -53,3 +53,8 @@ Muestra:
 **Untracked files:** Aquí se ven los ficheros que están en nuestro workspace de los que Git no tiene conocimiento aún. Es decir, no forman parte del control de versiones y por tanto, lógicamente, no formarán parte del próximo commit.
 
 
+En **Changes to be commited** nos dice:
+
+use "git reset HEAD <file>..." to unstage
+  
+Es decir, si queremos hacer unstage (sacar del stage) de los cambios sobre file2-modified.txt, debemos ejecutar **git reset HEAD file2-modified.txt.**
