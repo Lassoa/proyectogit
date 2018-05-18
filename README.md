@@ -11,7 +11,7 @@ Esta es la página de github.io que hostea la documentación del proyecto
 
 **Commits (locales)**: Cada commit es un grupo de cambios sobre uno o varios ficheros, con una descripción, una fecha, un autor, etc. La gran diferencia con SVN es que los commits en Git son locales hasta que no se efectúa la subida al servidor. Estos commits locales (importante que sean locales) pueden ser modificados sin peligro (con modificados quiero decir que se les pueden añadir más cambios, actualizar su mensaje o incluso eliminarlos).
 
-**Commits (remotos)**: Cuando se suben cambios al servidor (o como se le llama en Git: el remoto), se considera que estos entran a formar parte del histórico compartido entre los desarrolladores del proyecto y, por lo tanto, no es buena práctica modificarlos del mismo modo en que se hace cuando los commits son locales (además hacerlo puede provocar importantes quebraderos de cabeza).
+**Commits (remotos)**: Cuando se suben cambios al servidor remoto, se considera que estos entran a formar parte del histórico compartido entre los desarrolladores del proyecto y, por lo tanto, no es buena práctica modificarlos del mismo modo en que se hace cuando los commits son locales (además hacerlo puede provocar importantes quebraderos de cabeza).
 
 **1- Cambios en mi workspace**
 
@@ -64,7 +64,7 @@ Muestra:
 ### Añadir cambios al stage
 
 $ git add
-$ git add 1.txt 2.txt 3.txt
+$ git add 1.txt 2.css 3.html
 
 Para mover o renombrar ficheros:
 
@@ -93,6 +93,15 @@ Para quitar todos los cambios usamos el comando **$ git reset HEAD .**
 
 
 
+
+### Deshacer cambios sobre ficheros del workspace
+
+Para deshacer los cambios sobre todos los ficheros:
+
+$ git checkout -- .
+Para deshacer los cambios sobre ficheros concretos:
+
+$ git checkout -- 1.txt 2.css 3.html
 
 
 
@@ -125,7 +134,60 @@ La nueva rama que estamos creando estará **basada**(incluído el último commit
 
 También podemos crear una rama nueva basada en una remota en lugar de local.
 
-$ git checkout -b mi-rama origin/master
+$ git checkout -b mi-rama /origin/master/
+
+
+
+
+### Crear commits
+
+
+$ git commit (version vim)
+
+$ git commit -m "mensaje de commit"
+
+
+
+
+### Modificar el último commit
+
+Si aún no hemos hecho push de último commit:
+
+$ git add archivo-olvidado.txt
+
+$ git commit --amend
+
+
+### Eliminar commits/volver atrás
+
+**NO se deben eliminar commits que ya se han subido al servidor**
+
+
+Con el comando **$ git reset** le ordenamos a git "llévame hasta este commit, eliminando los que hay por encima".
+
+$ git reset 5ac24ae
+
+
+
+A esto se le llama un **soft reset**, ya que se vuelve hacia el commit indicado, pero se mantienen el resto de commits listados.
+
+Para borrar los commits además de volver hacia uno determinado, se hace un **hard reset**
+
+
+$ git reset --hard 5ac24ae
+
+
+
+
+Para deshacer un commmit:
+
+Podemos eliminar un fichero en concreto y crear un nuevo commit, pero Git nos deja hacerlo automáticamente:
+
+$ git **revert** 4de89ea
+
+Al hacer esto se creará un nuevo commit deshaciendo los cambios introducidos en el commit 4de89ea. 
+
+
 
 
 
@@ -164,4 +226,24 @@ $ git status
 El resultado se muestra en orden cronológico descendente
 
 
+
+
+### Subir cambios al remoto
+
+$ git push origin master
+
+
+
+
+
+### Traer cambios desde el remoto
+
+$ git pull origin master
+
+
+
+### Fusionar ramas
+
+$ git checkout master
+$ git merge mi-rama
 
