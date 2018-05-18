@@ -67,10 +67,10 @@ Para listar las ramas existentes en nuestro repositorio, usaremos:
 
 git branch -va
 
-´´´
+```
 $ git branch -va
 * master                  bed4c52 Sample commit
   dev                     bd81885 Another commit
   remotes/origin/master   bed4c52 Sample commit
   remotes/origin/dev      bed4c52 Sample commit
-´´´
+```
